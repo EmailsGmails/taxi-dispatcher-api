@@ -25,11 +25,11 @@ public class TaxiDispatchingService {
         TaxiDispatchingService.taxiUsers = taxiUsers;
     }
 
-    public static Set<TaxiOrder> getAvailableOrders() {
+    public synchronized static Set<TaxiOrder> getAvailableOrders() {
         return availableOrders;
     }
 
-    public static void setAvailableOrders(Set<TaxiOrder> availableOrders) {
+    public synchronized static void setAvailableOrders(Set<TaxiOrder> availableOrders) {
         TaxiDispatchingService.availableOrders = availableOrders;
     }
 
